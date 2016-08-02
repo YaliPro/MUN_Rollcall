@@ -1,7 +1,7 @@
 package views.ui.panel;
 
 import model.objects.Conference;
-import views.GraphicsConfig;
+import config.GraphicsConfig;
 import views.interfaces.PanelSwitch;
 
 import javax.swing.*;

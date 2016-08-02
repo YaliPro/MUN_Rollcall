@@ -1,7 +1,9 @@
+package config;
+
 /**
  * Created by Quentin on 8/2/16.
  */
-public class Config {
+public class GlobalConfig {
 
     public static final int SYSTEM_WINDOWS = 1;
     public static final int SYSTEM_LINUX = 2;

@@ -1,4 +1,4 @@
-package views;
+package config;
 
 import java.awt.*;
 

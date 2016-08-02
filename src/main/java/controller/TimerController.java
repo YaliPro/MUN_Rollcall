@@ -1,4 +1,4 @@
-package viewModel;
+package controller;
 
 import views.interfaces.MotionUpdate;
 

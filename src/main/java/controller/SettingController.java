@@ -1,4 +1,4 @@
-package viewModel;
+package controller;
 
 /**
  * Created by Quentin on 8/1/16.

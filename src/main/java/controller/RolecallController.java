@@ -1,4 +1,4 @@
-package viewModel;
+package controller;
 
 import model.objects.Delegate;
 import model.repository.DelegateRepository;

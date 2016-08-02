@@ -5,16 +5,38 @@ import com.sun.istack.internal.NotNull;
 import java.util.List;
 
 /**
- * Created by Quentin on 8/1/16.
+ * <p>Objects of this class represent motions proposed by delegates.</p>
+ *
+ * <p>When a delegate motions, the delegate needs to
+ * specify the topic, the total time and number of speakers.</p>
  */
 public class Motion {
 
+    /**
+     * The topic of a motion.
+     */
     private String topic;
+
+    /**
+     * The name of the delegate who proposes motion.
+     */
     private String delegate;
+
+    /**
+     * The list of name of speakers.
+     * This size of this list is equal to the number of speakers.
+     */
     private List<String> speakers;
 
+    /**
+     * The total time of a motion.
+     */
     private int totalTime;
 
+    /**
+     * Initializes a newly created {@code Motion} object that represent a motion.
+     * After initialization, value of each field needs to be set.
+     */
     public Motion() { }
 
     public String getTopic() {

@@ -1,6 +1,6 @@
 package views.ui;
 
-import views.GraphicsConfig;
+import config.GraphicsConfig;
 
 import javax.swing.*;
 

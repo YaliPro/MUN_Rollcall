@@ -2,7 +2,6 @@ package model.objects;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
@@ -10,24 +9,26 @@ import java.util.List;
  */
 public class Session {
 
-    private List<LinkedHashMap<String, String>> motions;
-    private static final String MOTION_TOPIC = "topic";
-    private static final String MOTION_DELEGATE = "delegate";
+    private static int count = 0;
 
-    private Date start;
+    public static final int ID = ++count;
+
+    private List<Motion> motions;
+
+    private Date start = new Date();
 
     private Date end;
 
     public Session(Date start) {
         this.start = start;
-        motions = new ArrayList<LinkedHashMap<String, String>>();
+        motions = new ArrayList<Motion>();
     }
 
-    public void addMotion(String topic, String delegate) {
-        throw new UnsupportedOperationException();
+    public void addMotion(Motion motion) {
+        motions.add(motion);
     }
 
-    public List<LinkedHashMap<String, String>> getMotions() {
+    public List<Motion> getMotions() {
         return motions;
     }
 
@@ -40,7 +41,6 @@ public class Session {
     }
 
     public void setEnd(Date end) {
-
         this.end = end;
     }
 }

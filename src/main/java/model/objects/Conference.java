@@ -1,6 +1,9 @@
 package model.objects;
 
+import config.ConferenceConfig;
+
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,14 +23,10 @@ public class Conference implements Serializable {
 
     private int sessionIndex;
 
-    /*private ConferenceRepository conferenceRepository;
-
-    public Conference(ConferenceRepository conferenceRepository) {
-        this.conferenceRepository = conferenceRepository;
-
-        name = conferenceRepository.getName();
-        topic = conferenceRepository.getTopic();
-        numberOfSessions = conferenceRepository.getNumOfSessoins();
+    public Conference() {
+        name = ConferenceConfig.getName();
+        topic = ConferenceConfig.getTopic();
+        numberOfSessions = ConferenceConfig.getNumOfSessions();
 
         sessionIndex = 1;
         sessions = new ArrayList<Session>();
