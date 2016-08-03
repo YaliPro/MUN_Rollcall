@@ -9,9 +9,9 @@ import java.util.List;
  */
 public class Session {
 
-    private static int count = 0;
+    public static int count = 0;
 
-    public static final int ID = ++count;
+    private final int ID = ++count;
 
     private List<Motion> motions;
 
@@ -42,5 +42,9 @@ public class Session {
 
     public void setEnd(Date end) {
         this.end = end;
+    }
+
+    public static int getCurrentSessionID() {
+        return count;
     }
 }

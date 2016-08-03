@@ -2,15 +2,22 @@ package model.objects;
 
 import com.sun.istack.internal.NotNull;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * <p>Objects of this class represent motions proposed by delegates.</p>
- *
+ * <p>
  * <p>When a delegate motions, the delegate needs to
  * specify the topic, the total time and number of speakers.</p>
  */
-public class Motion {
+public class Motion implements Serializable {
+
+
+    /**
+     * {@code serialVersionUID} for {@code Serializable}
+     */
+    private static final long serialVersionUID = 7413663560546621305L;
 
     /**
      * The topic of a motion.
