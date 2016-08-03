@@ -1,13 +1,13 @@
 package config;
 
 /**
- * Created by Quentin on 8/1/16.
+ * Conference configuration for
  */
 public class ConferenceConfig {
 
     private static int numOfSessions = 5;
-    private static String Name = "Yali High School";
-    private static String Topic = "GA";
+    private static String name = "Yali High School";
+    private static String topic = "GA";
 
     public ConferenceConfig() {}
 
@@ -21,19 +21,18 @@ public class ConferenceConfig {
     }
 
     public static String getName() {
-        return Name;
+        return name;
     }
 
     public static String getTopic() {
-        return Topic;
+        return topic;
     }
 
     public static void setName(String name) {
-
-        Name = name;
+        ConferenceConfig.name = name;
     }
 
     public static void setTopic(String topic) {
-        Topic = topic;
+        ConferenceConfig.topic = topic;
     }
 }
