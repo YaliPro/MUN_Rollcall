@@ -2,6 +2,7 @@ package model.repository;
 
 import model.objects.Delegate;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
@@ -30,19 +31,23 @@ public interface DelegateRepository {
      *
      * @return list of Delegates objects which represent delegates attending a conference
      * @see model.objects.Delegate
+     * @throws IllegalStateException the size of returned list is zero
      */
-    List<Delegate> getDelegates();
+    List<Delegate> getDelegates() throws IllegalStateException;
 
     /**
-     * The {@code Delegate} object should be found inside
+     * * The {@code Delegate} object should be found inside
      * the private list maintained by the subclass.
      *
      * @param nation the nation the delegate represents
      * @return model.objects.Delegate object that matches specified nation;
      * otherwise a model.objects.Delegate object with null values will be returned.
      * @see model.objects.Delegate
+     * @throws IllegalArgumentException {@code Delegate} object corresponding to argument 'nation' is not found
      */
-    Delegate findDelegateByNation(String nation);
+    Delegate findDelegateByNation(String nation) throws IllegalArgumentException;
+
+
 
     /**
      * The {@code Delegate} object should be found inside
@@ -52,8 +57,9 @@ public interface DelegateRepository {
      * @return model.objects.Delegate object that matches specified nation;
      * otherwise a model.objects.Delegate object with null values will be returned.
      * @see model.objects.Delegate
+     * @throws IllegalArgumentException {@code Delegate} object corresponding to argument 'name' is not found
      */
-    Delegate findDelegateByName(String name);
+    Delegate findDelegateByName(String name) throws IllegalArgumentException;
 
 
     /**
@@ -65,5 +71,5 @@ public interface DelegateRepository {
      * @param delegates list of getDelegates whose info is to be updated or be stored
      * @see model.objects.Delegate
      */
-    void updateDelegates(List<Delegate> delegates);
+    void updateDelegates(@NotNull List<Delegate> delegates);
 }

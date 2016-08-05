@@ -2,6 +2,7 @@ package model.repository;
 
 import model.objects.Motion;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
@@ -34,8 +35,9 @@ public interface SessionRepository {
      * @return list of {@code Motion} objects in a session.
      * @see model.objects.Session
      * @see model.objects.Motion
+     * @throws IllegalArgumentException argument 'session ID' exceeds current Session ID or total number of sessions
      */
-    List<Motion> findMotionsBySessionID(int session_ID);
+    List<Motion> findMotionsBySessionID(int session_ID) throws IllegalArgumentException;
 
     /**
      * Save list of {@code Motion} objects by file writing to a specific
@@ -50,8 +52,9 @@ public interface SessionRepository {
      * @param motions    list of {@code Motion} objects to be saved
      * @see model.objects.Session
      * @see model.objects.Motion
+     * @throws IllegalArgumentException argument 'session ID' exceeds current Session ID or total number of sessions
      */
-    void saveMotionsBySessionID(int session_ID, List<Motion> motions);
+    void saveMotionsBySessionID(int session_ID, @NotNull List<Motion> motions) throws IllegalArgumentException;
 
     /**
      * Save one {@code Motion} object by file writing to a specific
@@ -66,7 +69,8 @@ public interface SessionRepository {
      * @param motion     a {@code Motion} object to be saved
      * @see model.objects.Session
      * @see model.objects.Motion
+     * @throws IllegalArgumentException argument 'session ID' exceeds current Session ID or total number of sessions
      */
-    void saveMotionBySessionID(int session_ID, Motion motion);
+    void saveMotionBySessionID(int session_ID, @NotNull Motion motion) throws IllegalArgumentException;
 
 }

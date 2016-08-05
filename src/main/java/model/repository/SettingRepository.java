@@ -2,6 +2,8 @@ package model.repository;
 
 import model.objects.Conference;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * <p>Repository to save or retrieve conference setting information.</p>
  * <p>
@@ -15,6 +17,6 @@ import model.objects.Conference;
  */
 public interface SettingRepository {
 
-    void saveConferenceConfig(Conference conference);
+    void saveConferenceConfig(@NotNull Conference conference);
     Conference getConferenceConfig();
 }
