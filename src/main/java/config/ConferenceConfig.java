@@ -1,7 +1,7 @@
 package config;
 
 /**
- * Conference configuration for
+ * Conference configuration.
  */
 public class ConferenceConfig {
 
@@ -24,12 +24,12 @@ public class ConferenceConfig {
         return name;
     }
 
-    public static String getTopic() {
-        return topic;
-    }
-
     public static void setName(String name) {
         ConferenceConfig.name = name;
+    }
+
+    public static String getTopic() {
+        return topic;
     }
 
     public static void setTopic(String topic) {

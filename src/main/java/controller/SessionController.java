@@ -58,6 +58,11 @@ public abstract class SessionController {
     private MotionUpdate updateObject;
 
     /**
+     * Controller for motion
+     */
+    private MotionController motionController;
+
+    /**
      * Initializes a newly created {@code SessionController} to
      * save or retrieve {@code Motion} objects.
      *
@@ -80,7 +85,7 @@ public abstract class SessionController {
     /**
      * When a new motion is proposed, this method will be called
      * and will delegate tasks to {@code MotionController} by initializing
-     * a newly created {@code MotionController}.
+     * a newly created {@code MotionController} and saves the reference to {@code motionController}.
      *
      * @param motion the new motion proosed
      * @see model.objects.Motion
@@ -98,5 +103,16 @@ public abstract class SessionController {
      */
     protected abstract void saveMotions();
 
-
+    /**
+     * During a motion, once a delegate starts to deliver speech,
+     * this method will be called to start timer.
+     * Because classes of view layer won't hold reference to
+     * {@code MotionController} objects, this class is created to delegate
+     * calls to {@code MotionController}.
+     *
+     * @see controller.MotionController
+     */
+    protected void startTimer() {
+        motionController.startTimer();
+    }
 }

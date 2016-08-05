@@ -1,7 +1,8 @@
 package config;
 
 /**
- * Created by Quentin on 8/2/16.
+ * <p>Utility class for querying the system
+ * on which the application runs. </p>
  */
 public class GlobalConfig {
 

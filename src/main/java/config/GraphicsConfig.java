@@ -3,7 +3,7 @@ package config;
 import java.awt.*;
 
 /**
- * Utility class for retrieving screen width and height;
+ * Utility class for querying screen width and height;
  */
 public class GraphicsConfig {
     private static Dimension screenSize =
@@ -28,5 +28,4 @@ public class GraphicsConfig {
     public static Font getTitleFont() {
         return title;
     }
-
 }

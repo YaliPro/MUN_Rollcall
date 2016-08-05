@@ -2,6 +2,8 @@ package model.objects;
 
 import com.sun.istack.internal.NotNull;
 
+import java.io.Serializable;
+
 /**
  * Objects of this class represent
  * getDelegates attending the MUN conference.
@@ -13,7 +15,9 @@ import com.sun.istack.internal.NotNull;
  * the constructor with six parameters should be called;
  * otherwise the constructor with two parameters.
  */
-public class Delegate {
+public class Delegate implements Serializable {
+
+    private static final long serialVersionUID = 6860842167592954821L;
 
     /**
      * The name of delegate.
