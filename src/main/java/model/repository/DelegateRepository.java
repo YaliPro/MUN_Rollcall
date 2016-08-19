@@ -66,7 +66,9 @@ public interface DelegateRepository {
      * After each session, delegate's information
      * should be updated in the database
      * or should be stored after setting of conference is to be altered;
-     * This method should thus be called after the end of each session.
+     * This method should thus be called to save delegates' new information.
+     * When called, the internal list of {@code Delegate} objects should also be
+     * simultaneously updated.
      *
      * @param delegates list of getDelegates whose info is to be updated or be stored
      * @see model.objects.Delegate

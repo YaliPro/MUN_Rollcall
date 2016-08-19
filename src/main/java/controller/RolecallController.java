@@ -116,7 +116,8 @@ public abstract class RolecallController {
     /**
      * When the loop is terminated,
      * this method calls method {@code endRolecall} of {@code RolecallUpdate}
-     * to inform GUI components that the loop is over.
+     * to inform GUI components that the loop is over
+     * and calls {@code updateDelegates} of {@code DelegateRepository} to save objects.
      *
      * @see views.interfaces.RolecallUpdate
      */
