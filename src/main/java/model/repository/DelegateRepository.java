@@ -3,6 +3,7 @@ package model.repository;
 import model.objects.Delegate;
 
 import javax.validation.constraints.NotNull;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -73,5 +74,5 @@ public interface DelegateRepository {
      * @param delegates list of getDelegates whose info is to be updated or be stored
      * @see model.objects.Delegate
      */
-    void updateDelegates(@NotNull List<Delegate> delegates);
+    void updateDelegates(@NotNull List<Delegate> delegates) throws IOException;
 }

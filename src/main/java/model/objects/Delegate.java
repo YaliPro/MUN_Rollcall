@@ -121,6 +121,11 @@ public class Delegate implements Serializable {
         ++numberOfSpeeches;
     }
 
+    @Override
+    public String toString() {
+        return name + "  " + nation;
+    }
+
     public String getName() {
         return name;
     }
