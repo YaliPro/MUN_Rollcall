@@ -37,7 +37,6 @@ public class HomePanel extends JPanel {
         }
     };
 
-    //// FIXME: 7/31/16 component to be added
     private Conference conferenceSetting;
 
 

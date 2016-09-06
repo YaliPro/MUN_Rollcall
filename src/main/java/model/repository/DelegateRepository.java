@@ -8,8 +8,7 @@ import java.util.List;
 
 /**
  * <p>model.repository.DelegateRepository is the adapter
- * between application and data.
- * </p>
+ * between application and data.</p>
  * <p>
  * <p>Because current version only supports data storage by file writing,
  * any class that implements this interface should, for cross-platform compatibility,
@@ -23,7 +22,6 @@ import java.util.List;
  * @see model.objects.Delegate
  */
 public interface DelegateRepository {
-
 
     /**
      * When singleton object of this class that implements this interface
@@ -48,8 +46,6 @@ public interface DelegateRepository {
      */
     Delegate findDelegateByNation(String nation) throws IllegalArgumentException;
 
-
-
     /**
      * The {@code Delegate} object should be found inside
      * the private list maintained by the subclass.
@@ -61,7 +57,6 @@ public interface DelegateRepository {
      * @throws IllegalArgumentException {@code Delegate} object corresponding to argument 'name' is not found
      */
     Delegate findDelegateByName(String name) throws IllegalArgumentException;
-
 
     /**
      * After each session, delegate's information

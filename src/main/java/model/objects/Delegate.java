@@ -150,6 +150,8 @@ public class Delegate implements Serializable {
         return numberOfSpeeches;
     }
 
+
+
 //    public class Buidlder {
 //        private String name;
 //        private String nation;
